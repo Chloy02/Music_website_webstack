@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Artist - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .carousel-item img {
+      width: 100%;
+      object-fit: cover;
+    }
+    .carousel-caption {
+      bottom: 0;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px;
+    }
+    @media (min-width: 992px) {
+      #slide1 img {
+        object-position: top;
+      }
+      #slide2 img, #slide3 img {
+        object-position: bottom;
+      }
+      #slide4 img {
+        object-position: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="main.html">Chloy Costa</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="main.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="merchandise.html">Merchandise</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shows.html">Shows</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" id="slide1">
+        <img src="./resources/my_02.jpg" class="d-block w-100" alt="Slide 1">
+        <div class="carousel-caption d-none d-md-block">
+          <p>Experience the soul-stirring melodies from my latest album.</p>
+        </div>
+      </div>
+      <div class="carousel-item" id="slide2">
+        <img src="./resources/my_01.JPG" class="d-block w-100" alt="Slide 2">
+        <div class="carousel-caption d-none d-md-block">
+          <p>Description for Slide 2.</p>
+        </div>
+      </div>
+      <div class="carousel-item" id="slide3">
+        <img src="./resources/my_03.jpg" class="d-block w-100" alt="Slide 3">
+        <div class="carousel-caption d-none d-md-block">
+          <p>Meet my talented group, united by a love for music. Contact us for melodious choirs.</p>
+        </div>
+      </div>
+      <div class="carousel-item" id="slide4">
+        <img src="./resources/my_04.jpg" class="d-block w-100" alt="Slide 4">
+        <div class="carousel-caption d-none d-md-block">
+          <p>Hosting an unforgettable event, bringing laughter and joy together.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="container mt-5">
+    <h2>Welcome to My Music World</h2>
+    <p>Discover my latest music, upcoming shows, and exclusive merchandise.</p>
+    <h2>Features</h2>
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <i class="fas fa-music fa-3x"></i>
+        <h4>New Releases</h4>
+        <p>Check out my latest music releases.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <i class="fas fa-calendar-alt fa-3x"></i>
+        <h4>Upcoming Shows</h4>
+        <p>Don't miss my upcoming performances.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <i class="fas fa-shopping-cart fa-3x"></i>
+        <h4>Merchandise</h4>
+        <p>Get exclusive merchandise from my store.</p>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Join My Newsletter
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Join My Newsletter</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Sign up for my newsletter to stay updated on new releases, upcoming shows, and exclusive offers!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

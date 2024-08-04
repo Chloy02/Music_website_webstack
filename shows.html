@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Artist - Shows</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      background: url('./resources/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white; /* Ensures text is readable against the background */
+    }
+
+    .show-box {
+      position: relative;
+      color: white;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 200px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .show-box .details {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    .show-box h5 {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    }
+
+    .show-box:hover .details {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .show-box:hover h5 {
+      opacity: 0;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.8); /* Adds a semi-transparent background to the container for better readability */
+      border-radius: 10px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="main.html">Chloy Costa</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="main.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="merchandise.html">Merchandise</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shows.html">Shows</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5 pt-5">
+    <h2>Upcoming Shows</h2>
+    <p>Don't miss my upcoming performances.</p>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="show-box" style="background-image: url('./resources/Show_01.jpg');">
+          <h5>New York City!!</h5>
+          <div class="details">
+            <p>Date: August 10, 2024</p>
+            <p>Venue: City 1 Arena</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="show-box" style="background-image: url('./resources/Show_02.jpg');">
+          <h5>Lets goooo Bangaloreeee!</h5>
+          <div class="details">
+            <p>Date: September 5, 2024</p>
+            <p>Venue: City 2 Concert Hall</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="show-box" style="background-image: url('./resources/Show_03.jpg');">
+          <h5> Are You ready Delhi!!</h5>
+          <div class="details">
+            <p>Date: October 15, 2024</p>
+            <p>Venue: City 3 Music Festival</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
