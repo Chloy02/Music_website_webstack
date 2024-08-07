@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE musicWebsite SYSTEM "musicWebsite.dtd">
+<musicWebsite>
+    <artist>
+        <name>Chloy Cossta</name>
+        <genre>Pop</genre>
+        <bio>John Doe is a pop artist known for his soulful music.</bio>
+    </artist>
+    <albums>
+        <album>
+            <title>First Album</title>
+            <releaseDate>2022-01-01</releaseDate>
+            <tracks>
+                <track>
+                    <title>Track One</title>
+                    <duration>3:45</duration>
+                </track>
+                <track>
+                    <title>Track Two</title>
+                    <duration>4:20</duration>
+                </track>
+            </tracks>
+        </album>
+    </albums>
+    <shows>
+        <show>
+            <location>New York City</location>
+            <date>2024-08-10</date>
+        </show>
+        <show>
+            <location>Bangalore</location>
+            <date>2024-09-05</date>
+        </show>
+        <show>
+            <location>Delhi</location>
+            <date>2024-10-15</date>
+        </show>
+    </shows>
+</musicWebsite>

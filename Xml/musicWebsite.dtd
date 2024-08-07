@@ -1,0 +1,19 @@
+<!ELEMENT musicWebsite (artist, albums, shows)>
+<!ELEMENT artist (name, genre, bio)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT bio (#PCDATA)>
+
+<!ELEMENT albums (album*)>
+<!ELEMENT album (title, releaseDate, tracks)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT releaseDate (#PCDATA)>
+<!ELEMENT tracks (track*)>
+<!ELEMENT track (title, duration)>
+<!ELEMENT duration (#PCDATA)>
+
+<!ELEMENT shows (show*)>
+<!ELEMENT show (location, date)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+
