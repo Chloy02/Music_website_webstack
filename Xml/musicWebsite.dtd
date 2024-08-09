@@ -17,3 +17,11 @@
 <!ELEMENT location (#PCDATA)>
 <!ELEMENT date (#PCDATA)>
 
+<!ENTITY artist_name "Chloy Costa">
+<!ENTITY artist_bio "Chloy Costa is a pop artist known for his soulful music">
+<!ENTITY album_title_1 "First Album">
+<!ENTITY track_title_1 "Track one">
+<!ENTITY track_title_2 "Track Two">
+<!ENTITY locationNYC "New york City">
+<!ENTITY locationB "Bangalore">
+<!ENTITY locationD "Delhi">
