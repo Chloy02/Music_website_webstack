@@ -6,15 +6,16 @@
   <title>Music Artist - Contact</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
   <style>
     body {
       background: url('./resources/background_contact.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: white; /* Ensures text is readable against the background */
+      color: white;
     }
 
     .container {
-      background: rgba(0, 0, 0, 0.8); /* Adds a semi-transparent background to the container for better readability */
+      background: rgba(0, 0, 0, 0.8);
       border-radius: 10px;
       padding: 20px;
     }
@@ -40,6 +41,20 @@
     .footer a:hover {
       color: #ccc;
     }
+
+    #routeButton {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #routeButton:hover {
+      background-color: #0056b3;
+    }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
@@ -63,7 +78,7 @@
             <a class="nav-link" href="shows.html">Shows</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link active" href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
@@ -72,8 +87,9 @@
 
   <div class="container mt-5 pt-5">
     <h2>Contact Me</h2>
-    <p>Find my location on the map below!.</p>
+    <p>Find my location on the map below!</p>
     <div id="map" class="map-container"></div>
+    <button id="routeButton">Show Route from My Location</button>
   </div>
 
   <footer class="footer mt-5">
@@ -81,18 +97,65 @@
     <a href="https://t.me/Chloy_Costa" target="_blank"><i class="fab fa-telegram-plane"></i></a>
   </footer>
 
+  <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
   <script>
     var map = L.map('map').setView([15.332778, 73.929528], 13);
 
+    // Add the OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
+    // Add a marker at the destination labeled 'Chloy Costa'
     var marker = L.marker([15.332778, 73.929528]).addTo(map)
-      .bindPopup('My Company Location')
+      .bindPopup('Chloy Costa')
       .openPopup();
 
+    var routingControl = null;
+
+    document.getElementById('routeButton').onclick = function() {
+      if (routingControl === null) {
+        map.locate({setView: true, maxZoom: 16});
+
+        function onLocationFound(e) {
+          var userLocation = e.latlng;
+
+          // Add a marker at the user's current location with a popup
+          L.marker(userLocation).addTo(map)
+            .bindPopup('My Location')
+            .openPopup();
+
+          // Create a route from the user's location to the destination
+          routingControl = L.Routing.control({
+              waypoints: [
+                  L.latLng(userLocation),
+                  L.latLng(15.332778, 73.929528)
+              ],
+              routeWhileDragging: true,
+              createMarker: function() { return null; },
+              show: false // Hide the road signs box
+          }).addTo(map);
+
+          document.getElementById('routeButton').innerText = 'Stop Routing';
+        }
+
+        function onLocationError(e) {
+          alert(e.message);
+        }
+
+        map.on('locationfound', onLocationFound);
+        map.on('locationerror', onLocationError);
+
+      } else {
+        // Stop routing and remove the control
+        map.removeControl(routingControl);
+        routingControl = null;
+        document.getElementById('routeButton').innerText = 'Show Route from My Location';
+      }
+    };
+
+    // Open Google Maps when the marker is clicked
     function openGoogleMaps() {
       window.open('https://maps.google.com/?q=15.332778,73.929528', '_blank');
     }
