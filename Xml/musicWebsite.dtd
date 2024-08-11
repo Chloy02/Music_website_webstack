@@ -1,4 +1,4 @@
-<!ELEMENT musicWebsite (artist, albums, shows)>
+<!ELEMENT musicWebsite (artist, albums, shows, merchandise)>
 <!ELEMENT artist (name, genre, bio)>
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT genre (#PCDATA)>
@@ -16,6 +16,11 @@
 <!ELEMENT show (location, date)>
 <!ELEMENT location (#PCDATA)>
 <!ELEMENT date (#PCDATA)>
+
+<!ELEMENT merchandise (item*)>
+<!ELEMENT item (name, price, description)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
 
 <!ENTITY artist_name "Chloy Costa">
 <!ENTITY artist_bio "Chloy Costa is a pop artist known for his soulful music">

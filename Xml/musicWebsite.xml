@@ -4,8 +4,9 @@
     <artist>
         <name>Chloy Cossta</name>
         <genre>Pop</genre>
-        <bio>Chloy Costa is a pop artist known for his soulful music.</bio>
+        <bio>Chloy Costa is a pop artist known for her soulful music.</bio>
     </artist>
+
     <albums>
         <album>
             <title>First Album</title>
@@ -22,6 +23,7 @@
             </tracks>
         </album>
     </albums>
+
     <shows>
         <show>
             <location>New York City</location>
@@ -36,4 +38,18 @@
             <date>2024-10-15</date>
         </show>
     </shows>
+
+    <merchandise>
+        <item>
+            <name>T-Shirt</name>
+            <price>20.00</price>
+            <description>Official Chloy Costa T-Shirt</description>
+        </item>
+        <item>
+            <name>Mug</name>
+            <price>10.00</price>
+            <description>Chloy Costa Mug</description>
+        </item>
+    </merchandise>
+    
 </musicWebsite>
