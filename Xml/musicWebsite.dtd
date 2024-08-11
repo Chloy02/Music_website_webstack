@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <!ELEMENT musicWebsite (artist, albums, shows, merchandise)>
 <!ELEMENT artist (name, genre, bio)>
 <!ELEMENT name (#PCDATA)>
@@ -30,3 +32,6 @@
 <!ENTITY locationNYC "New york City">
 <!ENTITY locationB "Bangalore">
 <!ENTITY locationD "Delhi">
+<!ENTITY merchandise_1 "Electric Guitar T-shirt">
+<!ENTITY merchandise_2 "Acoutic Guitar T-shirt">
+<!ENTITY merchandise_3 "Classical acoutic guitar collection">
