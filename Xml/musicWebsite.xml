@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- <!DOCTYPE musicWebsite SYSTEM "musicWebsite.dtd"> -->
+<!-- <!DOCTYPE musicWebsite SYSTEM "musicWebsite.dtd"> --> 
  <?xml-stylesheet href="musicWebsite.xsl" type="text/xsl"?>
 <musicWebsite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xmlns="http://www.example.com/musicWebsite" xsi:schemaLocation="http://www.example.com/musicWebsite musicWebsite.xsd">
+xmlns="http://www.chloycosta.com/musicWebsite" xsi:schemaLocation="http://www.chloycosta.com/musicWebsite musicWebsite.xsd"> 
+
     <artist>
-        <name>Chloy Cossta</name>
+        <name>&amp;Chloy Costa</name>
         <genre>Pop</genre>
-        <bio>Chloy Costa is a pop artist known for her soulful music.</bio>
+        <bio>&amp;Chloy Costa is a pop artist known for her soulful music.</bio>
     </artist>
 
     <albums>
         <album>
-            <title>First Album</title>
+            <title>&amp;First Album</title>
             <releaseDate>2022-01-01</releaseDate>
             <tracks>
                 <track>
-                    <title>Track One</title>
+                    <title>&amp;Track One</title>
                     <duration>3:45</duration>
                 </track>
                 <track>
-                    <title>Track Two</title>
+                    <title>&amp;Track Two</title>
                     <duration>4:20</duration>
                 </track>
             </tracks>
@@ -28,37 +29,50 @@ xmlns="http://www.example.com/musicWebsite" xsi:schemaLocation="http://www.examp
 
     <shows>
         <show>
-            <location>New York City</location>
+            <location>&amp;New York City</location>
             <date>2024-08-10</date>
         </show>
         <show>
-            <location>Bangalore</location>
+            <location>&amp;Bangalore</location>
             <date>2024-09-05</date>
         </show>
         <show>
-            <location>Delhi</location>
+            <location>&amp;Delhi</location>
             <date>2024-10-15</date>
         </show>
     </shows>
 
     <merchandise>
         <item>
-            <name>Electric Guitar T-Shirt</name>
+            <name>&amp;Electric Guitar T-Shirt</name>
             <price>250.00</price>
             <description>This exclusive black t-shirt features a stylish guitar design, perfect for any music enthusiast.</description>
         </item>
 
         <item>
-            <name>Acoustic Guitar T-shirt</name>
+            <name>&amp;Acoustic Guitar T-shirt</name>
             <price>200.00</price>
             <description>A comfortable white t-shirt adorned with a classic guitar print, a must-have for casual wear.</description>
         </item>
 
         <item>
-            <name>Classical Acoutic guitar collection</name>
+            <name>&amp;Classical Acoustic Guitar Collection</name>
             <price>16000</price>
             <description>Beautifully crafted acoustic guitars, available in various models to suit all your musical needs.</description>
+            <items>
+                <item>
+                    <name>Model A Acoustic Guitar</name>
+                    <price>16000</price>
+                    <description>A top-quality acoustic guitar, perfect for professionals.</description>
+                </item>
+                <item>
+                    <name>Model B Acoustic Guitar</name>
+                    <price>18000</price>
+                    <description>Another excellent acoustic guitar model for advanced players.</description>
+                </item>
+            </items>
         </item>
+             
     </merchandise>
 
 </musicWebsite>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:ns="http://www.example.com/musicWebsite"
+                xmlns:ns="http://www.chloycosta.com/musicWebsite"
                 exclude-result-prefixes="ns">
     <xsl:template match="/">
         <html>
@@ -85,6 +85,22 @@
                             <td><xsl:value-of select="ns:price"/></td>
                             <td><xsl:value-of select="ns:description"/></td>
                         </tr>
+                        <xsl:if test="ns:items/ns:item">
+                            <tr>
+                                <td colspan="3">
+                                    <h3>Included Items:</h3>
+                                    <ul>
+                                        <xsl:for-each select="ns:items/ns:item">
+                                            <li>
+                                                <strong><xsl:value-of select="ns:name"/></strong> - 
+                                                <xsl:value-of select="ns:price"/> - 
+                                                <xsl:value-of select="ns:description"/>
+                                            </li>
+                                        </xsl:for-each>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </xsl:if>
                     </xsl:for-each>
                 </table>
             </body>
