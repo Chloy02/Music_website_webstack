@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE musicWebsite SYSTEM "musicWebsite.dtd">
-<musicWebsite>
+<!-- <!DOCTYPE musicWebsite SYSTEM "musicWebsite.dtd"> -->
+ <?xml-stylesheet href="musicWebsite.xsl" type="text/xsl"?>
+<musicWebsite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.example.com/musicWebsite" xsi:schemaLocation="http://www.example.com/musicWebsite musicWebsite.xsd">
     <artist>
         <name>Chloy Cossta</name>
         <genre>Pop</genre>
@@ -41,15 +43,22 @@
 
     <merchandise>
         <item>
-            <name>T-Shirt</name>
-            <price>20.00</price>
-            <description>Official Chloy Costa T-Shirt</description>
+            <name>Electric Guitar T-Shirt</name>
+            <price>250.00</price>
+            <description>This exclusive black t-shirt features a stylish guitar design, perfect for any music enthusiast.</description>
         </item>
+
         <item>
-            <name>Mug</name>
-            <price>10.00</price>
-            <description>Chloy Costa Mug</description>
+            <name>Acoustic Guitar T-shirt</name>
+            <price>200.00</price>
+            <description>A comfortable white t-shirt adorned with a classic guitar print, a must-have for casual wear.</description>
+        </item>
+
+        <item>
+            <name>Classical Acoutic guitar collection</name>
+            <price>16000</price>
+            <description>Beautifully crafted acoustic guitars, available in various models to suit all your musical needs.</description>
         </item>
     </merchandise>
-    
+
 </musicWebsite>
