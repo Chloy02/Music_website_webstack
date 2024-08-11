@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.example.com/musicWebsite" targetNamespace="http://www.example.com/musicWebsite" elementFormDefault="qualified">
+
+    <xs:element name="musicWebsite">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="artist" type="artistType"/>
+                <xs:element name="albums" type="albumsType"/>
+                <xs:element name="shows" type="showsType"/>
+                <xs:element name="merchandise" type="merchandiseType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="artistType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="genre">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Pop"/>
+                        <xs:enumeration value="Rock"/>
+                        <xs:enumeration value="Jazz"/>
+                        <xs:enumeration value="Classical"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="bio" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="albumsType">
+        <xs:sequence>
+            <xs:element name="album" type="albumType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="albumType">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="releaseDate" type="xs:date"/>
+            <xs:element name="tracks" type="tracksType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tracksType">
+        <xs:sequence>
+            <xs:element name="track" type="trackType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="trackType">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="duration">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="\d{1,2}:\d{2}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="showsType">
+        <xs:sequence>
+            <xs:element name="show" type="showType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="showType">
+        <xs:sequence>
+            <xs:element name="location" type="xs:string"/>
+            <xs:element name="date" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="merchandiseType">
+        <xs:sequence>
+            <xs:element name="item" type="itemType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="itemType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="price">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="16000"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="description" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
