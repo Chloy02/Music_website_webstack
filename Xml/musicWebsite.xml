@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- <!DOCTYPE musicWebsite SYSTEM "musicWebsite.dtd"> --> 
+<!-- <!DOCTYPE musicWebsite SYSTEM "musicWebsite.dtd">  -->
  <?xml-stylesheet href="musicWebsite.xsl" type="text/xsl"?>
 <musicWebsite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns="http://www.chloycosta.com/musicWebsite" xsi:schemaLocation="http://www.chloycosta.com/musicWebsite musicWebsite.xsd"> 
 
     <artist>
-        <name>&amp;Chloy Costa</name>
+        <name>Chloy Costa</name>
         <genre>Pop</genre>
         <bio>&amp;Chloy Costa is a pop artist known for her soulful music.</bio>
     </artist>
