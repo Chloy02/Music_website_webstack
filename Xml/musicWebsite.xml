@@ -3,7 +3,7 @@
  <?xml-stylesheet href="musicWebsite.xsl" type="text/xsl"?>
 <musicWebsite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns="http://www.chloycosta.com/musicWebsite" xsi:schemaLocation="http://www.chloycosta.com/musicWebsite musicWebsite.xsd"> 
-
+<!-- <musicWebsite> -->
     <artist>
         <name>Chloy Costa</name>
         <genre>Pop</genre>
