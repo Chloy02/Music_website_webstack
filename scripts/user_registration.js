@@ -30,12 +30,12 @@ function clearErrorMessage(inputElement) {
 
 function validateName() {
     if (nameInput.value.length < 3) {
-        nameInput.classList.add('border-red-500');
-        nameInput.classList.remove('border-green-500');
+        nameInput.classList.add('border-red-500', 'focus-red-border');
+        nameInput.classList.remove('border-green-500', 'focus:border-blue-300');
         showErrorMessage(nameInput, 'Name must be at least 3 characters long');
     } else {
-        nameInput.classList.remove('border-red-500');
-        nameInput.classList.add('border-green-500');
+        nameInput.classList.remove('border-red-500', 'focus-red-border', 'focus:border-blue-300');
+        nameInput.classList.add('border-green-500', 'focus-green-border');
         clearErrorMessage(nameInput);
     }
 }
@@ -43,12 +43,12 @@ function validateName() {
 function validateEmail() {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(emailInput.value)) {
-        emailInput.classList.add('border-red-500');
-        emailInput.classList.remove('border-green-500');
+        nameInput.classList.add('border-red-500', 'focus-red-border');
+        nameInput.classList.remove('border-green-500', 'focus:border-blue-300');
         showErrorMessage(emailInput, 'Please enter a valid email address');
     } else {
-        emailInput.classList.remove('border-red-500');
-        emailInput.classList.add('border-green-500');
+        nameInput.classList.remove('border-red-500', 'focus-red-border', 'focus:border-blue-300');
+        nameInput.classList.add('border-green-500', 'focus-green-border');
         clearErrorMessage(emailInput);
     }
 }

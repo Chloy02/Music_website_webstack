@@ -20,6 +20,19 @@
       margin-top: auto;
       width: 100%;
     }
+
+    .focus-red-border:focus {
+    border-color: #f00 !important;
+    outline: none; 
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.25); 
+    }
+
+    .focus-green-border:focus {
+    border-color: rgb(30, 255, 0) !important;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(30, 255, 0, 0.25); 
+    }
+
     .footer p {
       color: white;
       margin: 0;
@@ -71,35 +84,30 @@
             <div class="mb-4">
                 <label for="fullName" class="block text-gray-700 font-bold">Full Name</label>
                 <input type="text" id="fullName" name="fullName" class="mt-2 p-2 w-full border rounded focus:outline-none focus:ring focus:border-blue-300" placeholder="Enter your name" required>
-                <p id="fullNameError" class="text-red-500 mt-1 hidden">Please enter a valid name (min. 3 characters).</p>
             </div>
 
             <!-- Email -->
             <div class="mb-4">
                 <label for="email" class="block text-gray-700 font-bold">Email</label>
                 <input type="email" id="email" name="email" class="mt-2 p-2 w-full border rounded focus:outline-none focus:ring focus:border-blue-300" placeholder="user@example.com" required>
-                <p id="emailError" class="text-red-500 mt-1 hidden">Please enter a valid email address.</p>
             </div>
 
             <!-- Password -->
             <div class="mb-4">
                 <label for="password" class="block text-gray-700 font-bold">Password</label>
                 <input type="password" id="password" name="password" class="mt-2 p-2 w-full border rounded focus:outline-none focus:ring focus:border-blue-300" required>
-                <p id="passwordError" class="text-red-500 mt-1 hidden">Password must be at least 8 characters long and contain letters and numbers.</p>
             </div>
 
             <!-- Confirm Password -->
             <div class="mb-4">
                 <label for="confirmPassword" class="block text-gray-700 font-bold">Confirm Password</label>
                 <input type="password" id="confirmPassword" name="confirmPassword" class="mt-2 p-2 w-full border rounded focus:outline-none focus:ring focus:border-blue-300" required>
-                <p id="confirmPasswordError" class="text-red-500 mt-1 hidden">Passwords do not match.</p>
             </div>
 
             <!-- Date of Birth -->
             <div class="mb-4">
                 <label for="dob" class="block text-gray-700 font-bold">Date of Birth</label>
                 <input type="date" id="dob" name="dob" class="mt-2 p-2 w-full border rounded focus:outline-none focus:ring focus:border-blue-300" required>
-                <p id="dobError" class="text-red-500 mt-1 hidden">You must be at least 18 years old.</p>
             </div>
 
             <!-- Submit Button -->
