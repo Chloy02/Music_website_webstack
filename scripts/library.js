@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch artist data from MusicBrainz API
     async function fetchArtists(query, page = 1) {
-        const limit = 10; // Number of artists per page
+        const limit = 10;
         const offset = (page - 1) * limit;
         try {
             const response = await fetch(`https://musicbrainz.org/ws/2/artist?query=${query}&fmt=json&limit=${limit}&offset=${offset}`);
