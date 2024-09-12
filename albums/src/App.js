@@ -1,8 +1,10 @@
+import React from "react";
 import "./App.css";
+import Albumshow from "./AlbumShow";
 
 function getAlbum() {
-  const albums = ['Midnight Serenades', 'Heartflet Horizons', 'Whispers from the past', 'Starlit Stories', 'Eclipsed Emotions'];
-  return alnums[Math.floor(Math.random() * albums.length)];
+  const albums = ['album1', 'album2', 'album3', 'album4', 'album5'];
+  return albums[Math.floor(Math.random() * albums.length)];
 }
 
 function App() {
@@ -14,7 +16,7 @@ function App() {
     return <Albumshow type={album} key = {index}/>
   })
   return <div className="app">
-    <button onClick = {handleClick}>Add Animal</button>
+    <button onClick = {handleClick}>Show Album</button>
     <div className = "animal-list">{renderAlbums}</div>
   </div>
 }
