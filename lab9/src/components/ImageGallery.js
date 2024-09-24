@@ -1,41 +1,66 @@
-import React, { useState, useEffect } from 'react';
-import { fetchImages } from '../api';
+import React, { useEffect, useState } from "react";
+import { fetchImages } from "../api"; 
+import "./ImageGallery.css";
 
 function ImageGallery() {
   const [images, setImages] = useState([]);
-  const [searchQuery, setSearchQuery] = useState("music");
+  const [query, setQuery] = useState("music"); 
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  useEffect(() => {
-    loadImages();
-  }, [searchQuery]);
-
-  const loadImages = async () => {
+  // Fetch images from the API
+  const fetchImagesData = async (searchQuery) => {
     setLoading(true);
+    setError("");
     try {
-      const response = await fetchImages(searchQuery);
-      setImages(response.data.results);
+      const response = await fetchImages(searchQuery); 
+      console.log("API Response: ", response.data);
+      setImages(response.data.results); 
     } catch (error) {
       console.error("Error fetching images:", error);
+      setError("Failed to fetch images. Please try again.");
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
+
+  useEffect(() => {
+    fetchImagesData(query); 
+  }, [query]);
 
   return (
     <div className="gallery-container">
-      <h1>Image Gallery</h1>
-      <input
-        type="text"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        placeholder="Search for images"
-      />
-      <button onClick={loadImages}>Search</button>
-      {loading && <p>Loading...</p>}
-      <div className="image-grid">
-        {images.map((image) => (
-          <img key={image.id} src={image.urls.small} alt={image.alt_description} />
-        ))}
+      {/* Search Bar */}
+      <form className="search-bar" onSubmit={(e) => e.preventDefault()}>
+        <input
+          type="text"
+          placeholder="Search for images..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)} 
+        />
+      </form>
+
+      {/* Error handling */}
+      {error && <p className="error-message">{error}</p>}
+
+      {/* Gallery */}
+      <div className="gallery">
+        {loading ? (
+          <p>Loading images...</p>
+        ) : (
+          images.length > 0 ? (
+            images.map((image) => (
+              <img
+                key={image.id}
+                src={image.urls.small}
+                alt={image.description || "Unsplash Image"}
+                className="gallery-image"
+              />
+            ))
+          ) : (
+            <p>No images found. Try a different search term.</p>
+          )
+        )}
       </div>
     </div>
   );

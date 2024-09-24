@@ -1,0 +1,58 @@
+.gallery-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-bar input {
+    padding: 8px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-bar button {
+    padding: 8px 16px;
+    margin-left: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .search-bar button:hover {
+    background-color: #45a049;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .gallery-image {
+    margin: 10px;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+html, body {
+    margin: 0; 
+    padding: 0; 
+    height: 100%; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('./imgs/background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}

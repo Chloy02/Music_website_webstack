@@ -1,38 +1,41 @@
-.App {
-    text-align: center;
-  }
-  
-  .gallery-container {
-    margin: 20px;
-  }
-  
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-  }
-  
-  .image-grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .login-container {
-    margin-bottom: 20px;
-  }
-  
-  input {
-    margin: 10px;
-    padding: 8px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: auto;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-image {
+  margin: 10px;
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
