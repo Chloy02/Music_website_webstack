@@ -24,9 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Display artists in the UI
     function displayArtists(artists) {
-        // Sort artists based on selected sorting option
         artists.sort((a, b) => {
             if (currentSort === 'name') {
                 return a.name.localeCompare(b.name);
