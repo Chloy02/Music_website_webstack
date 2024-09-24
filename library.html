@@ -9,10 +9,8 @@
 <body class="bg-gray-100 min-h-screen flex flex-col items-center p-6">
     <h1 class="text-3xl font-bold mb-6">Artist Catalogue</h1>
 
-    <!-- Search bar -->
     <input id="searchInput" type="text" placeholder="Search for an artist..." class="p-2 border rounded mb-4">
 
-    <!-- Sorting options -->
     <div class="flex space-x-4 mb-4">
         <select id="sortOptions" class="p-2 border rounded">
             <option value="name">Sort by Name</option>
@@ -23,7 +21,6 @@
     <!-- Artist Container -->
     <div id="artistContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl"></div>
 
-    <!-- Pagination Controls -->
     <div class="flex space-x-4 mt-6">
         <button id="prevPage" class="p-2 bg-blue-500 text-white rounded disabled:opacity-50" disabled>Previous</button>
         <button id="nextPage" class="p-2 bg-blue-500 text-white rounded">Next</button>
